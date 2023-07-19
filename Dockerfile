@@ -10,6 +10,9 @@ COPY requirements.txt .
 # Install the project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy the project files to the working directory
+COPY . .
+
 # Expose the port that Flask will be running on
 EXPOSE 5005
 
@@ -17,4 +20,5 @@ EXPOSE 5005
 ENV FLASK_APP=client-server.py
 
 # Run the Flask application using host networking mode
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=5005", "--no-reload", "--no-debugger"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5005", "--no-reload", "--no-debugger"]
+
