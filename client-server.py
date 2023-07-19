@@ -2,10 +2,11 @@ from flask import Flask, request, jsonify
 import psutil
 # import docker
 # client = docker.from_env() # docker client initialization
-import socket
+import logging
 
-# Get the server's hostname
-server_name = socket.gethostname()
+#get server name
+with open('/mnt/hostname', 'r') as file:
+    server_name = file.read().strip()
 
 app=Flask(__name__)
 

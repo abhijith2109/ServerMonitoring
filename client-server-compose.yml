@@ -9,6 +9,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/hostname:/mnt/hostname
     ports:
       - 5000:5000
     restart: unless-stopped
