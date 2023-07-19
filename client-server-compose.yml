@@ -11,5 +11,5 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/hostname:/mnt/hostname
     ports:
-      - 6000:6000
+      - 5005:5005
     restart: unless-stopped
