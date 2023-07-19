@@ -4,7 +4,7 @@ import psutil
 # client = docker.from_env() # docker client initialization
 import logging
 
-#get server name
+get server name
 with open('/mnt/hostname', 'r') as file:
     server_name = file.read().strip()
 
@@ -43,7 +43,7 @@ def get_server_spec():
 #     container1=client.containers.get(docker_container)
 #     logs = container1.logs(timestamps=True,tail='all').decode('utf-8')
 #     return jsonify(logs)
-    
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=6000)
+    app.run(host='0.0.0.0', port=5005)
 
