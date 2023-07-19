@@ -21,4 +21,3 @@ ENV FLASK_APP=client-server.py
 
 # Run the Flask application using host networking mode
 CMD ["flask", "run", "--host=0.0.0.0", "--port=5005", "--no-reload", "--no-debugger"]
-
