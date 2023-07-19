@@ -22,6 +22,7 @@ def get_server_spec():
         'memory_usage': memory_usage,
         'storage_usage':storage_usage
     }
+
     print(server_specs)
     return jsonify(server_specs)
 
