@@ -2,7 +2,10 @@ from flask import Flask, request, jsonify
 import psutil
 import docker
 client = docker.from_env() # docker client initialization
+import socket
 
+# Get the server's hostname
+server_name = socket.gethostname()
 
 app=Flask(__name__)
 
@@ -13,6 +16,7 @@ def get_server_spec():
     storage_usage=psutil.disk_usage("/").percent
 
     server_specs={
+        'server_name':server_name,
         'cpu_usage': cpu_usage,
         'memory_usage': memory_usage,
         'storage_usage':storage_usage
