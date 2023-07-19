@@ -11,10 +11,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose the port that Flask will be running on
-EXPOSE 6000
+EXPOSE 5005
 
 # Set the environment variables
 ENV FLASK_APP=client-server.py
 
 # Run the Flask application using host networking mode
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=6000", "--no-reload", "--no-debugger"]
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=5005", "--no-reload", "--no-debugger"]
