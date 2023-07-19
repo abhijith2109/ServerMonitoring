@@ -4,7 +4,7 @@ import psutil
 # client = docker.from_env() # docker client initialization
 import logging
 
-get server name
+
 with open('/mnt/hostname', 'r') as file:
     server_name = file.read().strip()
 
