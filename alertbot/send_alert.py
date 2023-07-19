@@ -5,7 +5,7 @@ from telegram import Bot
 import json
 import asyncio
 
-with open("config.json") as config_file:
+with open("../config.json") as config_file:
     config = json.load(config_file)
 
 
