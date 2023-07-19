@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir --upgrade pip
 
 # Copy the current directory to the container
 COPY . .
-COPY ./requirements.txt .
+COPY /requirements.txt .
 # Install the Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 

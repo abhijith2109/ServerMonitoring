@@ -1,0 +1,13 @@
+version: "3"
+services:
+ bot-server:
+
+    image: alertbot-img
+    container_name: alertbot-cont
+    build:
+      context: .
+      dockerfile: alertbot/Dockerfile
+
+    #ports:
+    #  - 5005:5005
+    restart: unless-stopped
