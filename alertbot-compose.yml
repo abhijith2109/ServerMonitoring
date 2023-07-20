@@ -2,8 +2,8 @@ version: "3"
 services:
  bot-server:
 
-    image: alertbot-img
-    container_name: alertbot-cont
+    image: alert-img
+    container_name: alert-cont
     build:
       context: .
       dockerfile: alertbot/Dockerfile
