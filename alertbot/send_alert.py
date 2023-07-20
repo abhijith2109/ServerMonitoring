@@ -7,7 +7,7 @@ import asyncio
 
 
 
-config_file_path = '../config.json'
+config_file_path = 'config.json'
 with open(config_file_path) as config_file:
     config = json.load(config_file)
 

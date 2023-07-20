@@ -6,10 +6,10 @@ WORKDIR /app
 RUN pip install --no-cache-dir --upgrade pip
 
 # Copy the current directory to the container
-COPY . .
-COPY /requirements.txt .
+Copy alertbot/send_alert.py .
+COPY config.json .
+COPY requirements.txt .
 # Install the Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "send_alert.py"]
-
