@@ -1,7 +1,6 @@
 FROM python:3.9-slim
 
 WORKDIR /app
-
 # Upgrade pip
 RUN pip install --no-cache-dir --upgrade pip
 
